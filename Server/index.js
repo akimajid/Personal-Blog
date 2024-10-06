@@ -17,6 +17,9 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Use routes
+app.use("/api", routes);
+
 // Database connection
 sequelize.sync().then(() => {
   console.log("Database connected");
