@@ -23,7 +23,7 @@ class UserController {
   static async getUserProfile(req, res) {
     try {
       const user = await UserService.getUserById(req.user.id);
-      res.status(200).json(user);
+      res.status(200).json({ message: "Get Users successful", user });
     } catch (error) {
       res.status(404).json({ error: error.message });
     }
