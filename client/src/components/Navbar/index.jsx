@@ -14,7 +14,7 @@ const Navbar = () => {
             href="/"
             className="text-xl font-bold text-black hover:text-[#02939e] transition-colors duration-300"
           >
-            Todo App
+            Personal Blog
           </Link>
           {isAuthenticated && (
             <Link

@@ -29,21 +29,17 @@ export default function BlogList() {
             key={blog.id}
             className="bg-white rounded-lg shadow-md p-6 transition-transform duration-300 hover:scale-105"
           >
-            {/* Blog Title */}
             <h2 className="text-2xl font-semibold mb-2">{blog.title}</h2>
 
-            {/* Category Badge */}
             <span className="inline-block bg-teal-500 text-white text-sm font-medium px-3 py-1 rounded-full mb-4">
               {blog.category}
             </span>
 
-            {/* Blog Excerpt */}
             <p className="text-gray-700 mb-4">
               {blog.content.slice(0, 100)}...
             </p>
 
-            {/* Read More Button */}
-            <Link href={`/blog/${blog.id}`}>
+            <Link href={`/blogs/${blog.id}`}>
               <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
                 Read More
               </button>
