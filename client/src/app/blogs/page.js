@@ -10,7 +10,6 @@ export default function BlogList() {
     const fetchBlogs = async () => {
       try {
         const response = await api.get("/blog/blogs");
-        console.log(response);
         setBlogs(response.data.blogs);
       } catch (error) {
         console.error("Failed to fetch blogs:", error);

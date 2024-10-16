@@ -15,7 +15,6 @@ export default function BlogDetail({ params }) {
       const fetchBlog = async () => {
         try {
           const response = await api.get(`blog/blogs/${id}`);
-          console.log(response);
           setBlog(response.data.blog);
         } catch (error) {
           console.error("Failed to fetch blog:", error);
@@ -42,7 +41,7 @@ export default function BlogDetail({ params }) {
         <h1 className="text-4xl font-bold mb-4 text-gray-900">{blog.title}</h1>
         <p className="text-gray-700 mb-8">{blog.content}</p>
         <div className="flex space-x-4">
-          <Link href={`/edit/${blog.id}`}>
+          <Link href={`${blog.id}/edit`}>
             <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
               Edit Blog
             </button>
