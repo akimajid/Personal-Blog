@@ -22,7 +22,7 @@ const Login = () => {
       const response = await loginUser({ email, password });
       if (response.data.token) {
         localStorage.setItem("token", response.data.token);
-        router.push("/todos");
+        router.push("/blogs");
         toast.success("Login successful!");
       } else {
         toast.error("Login failed. Please try again.");

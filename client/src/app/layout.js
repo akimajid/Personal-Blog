@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 import { AuthProvider } from "../contexts/AuthContext";
 
 export const metadata = {
-  title: "Todo App",
-  description: "A simple todo app with authentication",
+  title: "Personal Blog",
+  description: "A simple Personal blog with authentication",
 };
 
 export default function RootLayout({ children }) {
