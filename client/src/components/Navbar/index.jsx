@@ -18,7 +18,7 @@ const Navbar = () => {
           </Link>
           {isAuthenticated && (
             <Link
-              href="/todos/create"
+              href="/blogs/create"
               className="text-white bg-[#02939e] hover:bg-white hover:text-[#02939e] hover:border hover:border-[#02939e] font-semibold text-xs py-2 px-4 rounded-md transition-colors duration-300"
             >
               + Add New Blog

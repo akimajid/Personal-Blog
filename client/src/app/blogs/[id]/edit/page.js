@@ -20,8 +20,7 @@ export default function EditBlog({ params }) {
       }
       try {
         const response = await api.get(`/blog/blogs/${id}`);
-        console.log("API Response:", response);
-        if (response && response.data) {
+        if (response && response.data.blog) {
           setTitle(response.data.blog.title || "");
           setContent(response.data.blog.content || "");
         } else {

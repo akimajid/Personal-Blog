@@ -4,6 +4,9 @@ const API_URL = "http://localhost:5000/api";
 
 const api = axios.create({
   baseURL: API_URL,
+  headers: {
+    Authorization: `Bearer ${localStorage.getItem("token")}`,
+  },
 });
 
 api.interceptors.request.use(
@@ -23,4 +26,4 @@ api.interceptors.request.use(
 export const loginUser = (credentials) => api.post(`/users/login`, credentials);
 export const registerUser = (userData) => api.post(`/users/register`, userData);
 
-export default api
+export default api;
